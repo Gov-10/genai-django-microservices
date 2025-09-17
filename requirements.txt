@@ -1,0 +1,7 @@
+python
+django
+django-rest-framework
+djangorestframework-simplejwt
+psycopg2-binary
+django-ninja
+pydantic
