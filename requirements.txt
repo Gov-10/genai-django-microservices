@@ -1,7 +1,10 @@
-python
 django
 django-rest-framework
 djangorestframework-simplejwt
-psycopg2-binary
 django-ninja
-pydantic
+psycopg2-binary
+python-dotenv
+requests
+django-phonenumber-field
+phonenumbers
+django-cors-headers
