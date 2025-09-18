@@ -5,7 +5,7 @@ from .models import SpashtUser
 from rest_framework_simplejwt.tokens import RefreshToken
 from ninja.errors import ValidationError
 from rest_framework_simplejwt.views import TokenRefreshView
-api = NinjaAPI()
+api = NinjaAPI(title="Spasht API Docs")
 
 @api.post("/signup", response=TokenSchema)
 def signup(request, data:SignupSchema):
@@ -20,7 +20,7 @@ def signup(request, data:SignupSchema):
         place= data.place, 
         date_of_birth = data.date_of_birth,
         profession= data.profession,
-        mobile_number= data.mobile_number
+        mobile_no= data.mobile_no
     )
     user.save()
     refresh = RefreshToken.for_user(user)

@@ -1,4 +1,13 @@
 from ninja import Schema
+from datetime import date
+from typing import Optional
+from enum import Enum
+
+class ProfessionEnum(str, Enum):
+    student = "student"
+    law_practitioner = "law_practitioner"
+    other = "other"
+
 class LoginSchema(Schema):
     username :str
     password:str
@@ -11,7 +20,7 @@ class SignupSchema(Schema):
     username : str
     password : str
     email : str
-    place : str = None
-    date_of_birth : str = None
-    profession : str = None
-    mobile_number : str = None
+    place : Optional[str] = None
+    date_of_birth : Optional[date] = None
+    profession : Optional[ProfessionEnum] = None
+    mobile_no : Optional[str] = None

@@ -12,7 +12,7 @@ class SpashtUser(AbstractUser):
         ("other", "Other")
     ]
     profession = models.CharField(max_length=20, choices=PROFESSION_CHOICES, blank=True, null=True)
-    mobile_number = models.CharField(max_length=15, blank=True, null=True)
+    mobile_no = PhoneNumberField(blank=True, null=True, unique=True)
     def __str__(self):
         return self.username
 
